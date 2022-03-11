@@ -2,8 +2,8 @@
  * ==========================================
  * SUBMIT FORM USING FETCH :
  *
- * Lors de la soumission du formulaire de contact sur la page "pro.html",
- * ce script empêche le changement de page (vers une page vide)
+ * Lors de la soumission du formulaire de contact,
+ * ce script empêche le changement de page (vers une page vide).
  * ==========================================
  */
 
@@ -48,3 +48,16 @@ function fetchpost() {
     // (C) PREVENT HTML FORM SUBMIT
     return false;
 }
+
+/**
+ * ==========================================
+ * Afficher âge en fonction de la date du jour
+ * ==========================================
+ */
+
+let birthday = new Date("February 13, 1982");
+let today = new Date();
+let difference = today - birthday;
+let age = Math.trunc(difference / (1000 * 60 * 60 * 24 * 365.25));
+// console.log(age);
+document.getElementById("age").textContent = age + " ans";
